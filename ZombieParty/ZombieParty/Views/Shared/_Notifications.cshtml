@@ -1,0 +1,20 @@
+﻿@using ZombieParty.ViewModels
+@using ZombieParty.Utility
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@if (TempData[AppConstants.Success] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.success('@TempData[AppConstants.Success]');
+    </script>
+}
+@if (TempData[AppConstants.Error] != null)
+{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript">
+        toastr.error('@TempData[AppConstants.Error]');
+    </script>
+}
